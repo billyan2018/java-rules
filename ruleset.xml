@@ -38,6 +38,7 @@ under the License.
     <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod"/>
 	<!-- Performance -->
     <rule ref="category/java/performance.xml/AvoidArrayLoops" />
+	<rule ref="category/java/errorprone.xml/AvoidCatchingThrowable" />
 
 
    

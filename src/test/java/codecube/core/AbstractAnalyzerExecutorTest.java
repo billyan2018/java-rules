@@ -47,8 +47,11 @@ public abstract class AbstractAnalyzerExecutorTest {
   @Test
   @Ignore
   public void should_report_issues() {
+	  try {
 	  
 	throw new Exception("bad sample");
+	  } catch(Throwable th) {
+	  }
     AnalyzerResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();
     assertThat(result.errors()).isEmpty();

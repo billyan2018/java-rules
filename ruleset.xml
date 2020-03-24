@@ -36,6 +36,8 @@ under the License.
 	<rule ref="category/java/bestpractices.xml/UnusedLocalVariable"/>
     <rule ref="category/java/bestpractices.xml/UnusedPrivateField"/>
     <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod"/>
+	<!-- Performance -->
+    <rule ref="category/java/performance.xml/AvoidArrayLoops" />
 
 
    

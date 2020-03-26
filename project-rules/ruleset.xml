@@ -25,6 +25,7 @@ under the License.
     <include-pattern>.*.java</include-pattern>
     <!-- More  -->
     <rule ref="category/java/bestpractices.xml/LooseCoupling" />
+	<rule ref="category/java/design.xml/AbstractClassWithoutAnyMethod" />
 
    
 </ruleset>

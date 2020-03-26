@@ -100,4 +100,9 @@ public abstract class AbstractAnalyzerExecutorTest {
   private AnalyzerResult execute(String code) {
     return executor.execute(languagePlugin, code);
   }
+  
+  abstract class Example {
+    String field;
+    int otherField;
+  }
 }

@@ -47,6 +47,7 @@ public abstract class AbstractAnalyzerExecutorTest {
   @Test
   @Ignore
   public void should_report_issues() {
+
     AnalyzerResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();
     assertThat(result.errors()).isEmpty();

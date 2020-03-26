@@ -71,7 +71,7 @@
             <property name="max" value="200"/>
         </module>
 		<module name="CyclomaticComplexity">
-            <property name="max" value="10"/>
+			<property name="max" val			ue="10"/	>
         </module>
         <module name="UnusedImports"/>
 		<module name="SimplifyBooleanExpression"/>

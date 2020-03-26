@@ -5,18 +5,13 @@
 
 <module name = "Checker">
     <property name="charset" value="UTF-8"/>
-
     <property name="severity" value="warning"/>
-
     <property name="fileExtensions" value="java, properties, xml"/>
-
     <module name="SuppressionFilter">
         <property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
                   default="checkstyle-suppressions.xml" />
         <property name="optional" value="true"/>
     </module>
-
-
 
     <module name="TreeWalker">
 	    <property name="fileExtensions" value="java"/>
@@ -50,8 +45,6 @@
       
         <module name="ModifierOrder"/>
 
-       
-  
         <module name="LocalVariableName">
             <property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
             <message key="name.invalidPattern"

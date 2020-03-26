@@ -24,6 +24,39 @@ under the License.
     </description>
     <include-pattern>.*.java</include-pattern>
     <!-- High Priority  -->
+	<!-- Security-->
+	<rule ref="category/java/security.xml/InsecureCryptoIv" />
+	<rule ref="category/java/security.xml/HardCodedCryptoKey" />
+	<!-- Performance -->
+	<rule ref="category/java/performance.xml/StringInstantiation" />
+	<rule ref="category/java/performance.xml/UseArrayListInsteadOfVector" />
+	<rule ref="category/java/performance.xml/AvoidArrayLoops" />
+	<rule ref="category/java/errorprone.xml/CloseResource" />
+	<!-- Unit test -->
+	<rule ref="category/java/bestpractices.xml/JUnitTestsShouldIncludeAssert" />
+	<!-- Logging -->
+	<rule ref="category/java/bestpractices.xml/AvoidPrintStackTrace" />
+	<rule ref="category/java/bestpractices.xml/SystemPrintln" />
+	<rule ref="category/java/errorprone.xml/ProperLogger">
+        <properties>
+            <property name="staticLoggerName" value="log" />
+            <property name="loggerName" value="log" />
+            <property name="loggerClass" value="Log" />
+        </properties>
+    </rule>
+	<!-- Defensive Programming -->
+	<rule ref="category/java/bestpractices.xml/PositionLiteralsFirstInCaseInsensitiveComparisons" />
+	<rule ref="category/java/bestpractices.xml/PositionLiteralsFirstInComparisons" />
+	<!-- Code style -->
+	<rule ref="category/java/codestyle.xml/ShortVariable" />
+	<rule ref="category/java/codestyle.xml/ShortMethodName" />
+	<rule ref="category/java/bestpractices.xml/DefaultLabelNotLastInSwitchStmt" />
+	<rule ref="category/java/bestpractices.xml/SwitchStmtsShouldHaveDefault" />
+	<rule ref="category/java/errorprone.xml/MissingBreakInSwitch" />
+	<rule ref="category/java/bestpractices.xml/UnusedPrivateMethod" />
+	<rule ref="category/java/bestpractices.xml/UnusedLocalVariable" />
+	<rule ref="category/java/bestpractices.xml/UnusedPrivateField" />
+	<rule ref="category/java/bestpractices.xml/UnusedFormalParameter" />
 	<!-- Error prone-->
     <rule ref="category/java/errorprone.xml/AvoidDecimalLiteralsInBigDecimalConstructor" />
 	<rule ref="category/java/errorprone.xml/DontUseFloatTypeForLoopIndices" />

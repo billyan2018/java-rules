@@ -47,7 +47,7 @@ public abstract class AbstractAnalyzerExecutorTest {
   @Test
   @Ignore
   public void should_report_issues() {
-	HashSet<String> texts = new HashSet() {
+	HashSet<String> texts = new HashSet<>() {
 		{
 			add("a");
 			add("b");
@@ -59,6 +59,7 @@ public abstract class AbstractAnalyzerExecutorTest {
     assertThat(result.success()).isTrue();
     assertThat(result.errors()).isEmpty();
     assertThat(result.issues()).hasSize(issueCount());
+	assertThat(texts).hasSize(3);
   }
 
   @Test

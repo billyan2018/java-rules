@@ -47,11 +47,19 @@ public abstract class AbstractAnalyzerExecutorTest {
   @Test
   @Ignore
   public void should_report_issues() {
+	HashSet<String> texts = new HashSet<>() {
+		{
+			add("a");
+			add("b");
+			add("c");
+		}
+	};
 
     AnalyzerResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();
     assertThat(result.errors()).isEmpty();
     assertThat(result.issues()).hasSize(issueCount());
+	assertThat(texts).hasSize(3);
   }
 
   @Test

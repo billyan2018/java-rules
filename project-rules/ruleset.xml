@@ -23,8 +23,8 @@ under the License.
     <description>
     </description>
     <include-pattern>.*.java</include-pattern>
-    <!-- High Priority  -->
-
+    <!-- More  -->
+    <rule ref="category/java/bestpractices.xml/LooseCoupling" />
 
    
 </ruleset>

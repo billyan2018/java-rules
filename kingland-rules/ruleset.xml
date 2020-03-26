@@ -78,8 +78,4 @@ under the License.
 	<rule ref="category/java/errorprone.xml/EmptyFinallyBlock" />
 	<rule ref="category/java/errorprone.xml/ReturnFromFinallyBlock" />
 	<rule ref="category/java/errorprone.xml/DoNotThrowExceptionInFinally" />
-	
-
-
-   
 </ruleset>

@@ -6,7 +6,7 @@
 <module name = "Checker">
     <property name="charset" value="UTF-8"/>
     <property name="severity" value="warning"/>
-    <property name="fileExtensions" value="java, properties, xml"/>
+    <property name="fileExtensions" value="java"/>
     <module name="SuppressionFilter">
         <property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
                   default="checkstyle-suppressions.xml" />
@@ -59,7 +59,7 @@
             <property name="max" value="200"/>
         </module>
 		<module name="CyclomaticComplexity">
-			<property name="max" val			ue="10"/	>
+			<property name="max" value="15"/	>
         </module>
         <module name="UnusedImports"/>
 		<module name="SimplifyBooleanExpression"/>

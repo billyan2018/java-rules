@@ -12,7 +12,7 @@
                   default="checkstyle-suppressions.xml" />
         <property name="optional" value="true"/>
     </module>
-	<module name="FileTabCharacter">
+    <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
     </module>
     <module name="LineLength">
@@ -22,7 +22,7 @@
     </module>
 
     <module name="TreeWalker">
-	    <property name="fileExtensions" value="java"/>
+        <property name="fileExtensions" value="java"/>
 
 
 
@@ -52,28 +52,28 @@
             <message key="name.invalidPattern"
              value="Local variable name ''{0}'' must match pattern ''{1}''."/>
         </module>
-		<module name="SingleSpaceSeparator"/>
-		<module name="MethodLength">
+        <module name="SingleSpaceSeparator"/>
+        <module name="MethodLength">
             <property name="tokens" value="METHOD_DEF"/>
             <property name="max" value="150"/>
         </module>
-		<module name="NPathComplexity">
+        <module name="NPathComplexity">
             <property name="max" value="200"/>
         </module>
-		<module name="CyclomaticComplexity">
-			<property name="max" value="15"/>
+        <module name="CyclomaticComplexity">
+            <property name="max" value="15"/>
         </module>
         <module name="UnusedImports"/>
-		<module name="SimplifyBooleanExpression"/>
-		<module name="MagicNumber"/>
-		<module name="EmptyStatement"/>
-		<module name="VisibilityModifier"/>
-		<module name="HideUtilityClassConstructor"/>
-		<module name="AvoidNestedBlocks"/>
-		<!-- End Company Rules -->
+        <module name="SimplifyBooleanExpression"/>
+        <module name="MagicNumber"/>
+        <module name="EmptyStatement"/>
+        <module name="VisibilityModifier"/>
+        <module name="HideUtilityClassConstructor"/>
+        <module name="AvoidNestedBlocks"/>
+        <!-- End Company Rules -->
 
         <!-- Start Project Rules -->
 
-		<!-- End Project Rules -->
+        <!-- End Project Rules -->
     </module>
 </module>

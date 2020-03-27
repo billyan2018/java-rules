@@ -2,8 +2,8 @@
 <!DOCTYPE module PUBLIC
           "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
           "https://checkstyle.org/dtds/configuration_1_3.dtd">
-
 <module name = "Checker">
+    <!-- Start Company Rules -->
     <property name="charset" value="UTF-8"/>
     <property name="severity" value="warning"/>
     <property name="fileExtensions" value="java"/>
@@ -12,18 +12,20 @@
                   default="checkstyle-suppressions.xml" />
         <property name="optional" value="true"/>
     </module>
+	<module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+    </module>
+    <module name="LineLength">
+        <property name="fileExtensions" value="java"/>
+        <property name="max" value="120"/>
+        <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+    </module>
 
     <module name="TreeWalker">
 	    <property name="fileExtensions" value="java"/>
-	    <module name="FileTabCharacter">
-            <property name="eachLine" value="true"/>
-        </module>
 
-        <module name="LineLength">
-            <property name="fileExtensions" value="java"/>
-            <property name="max" value="120"/>
-            <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
-        </module>
+
+
   
         <module name="EmptyBlock">
             <property name="option" value="TEXT"/>
@@ -59,7 +61,7 @@
             <property name="max" value="200"/>
         </module>
 		<module name="CyclomaticComplexity">
-			<property name="max" value="15"/	>
+			<property name="max" value="15"/>
         </module>
         <module name="UnusedImports"/>
 		<module name="SimplifyBooleanExpression"/>
@@ -68,6 +70,10 @@
 		<module name="VisibilityModifier"/>
 		<module name="HideUtilityClassConstructor"/>
 		<module name="AvoidNestedBlocks"/>
+		<!-- End Company Rules -->
 
+        <!-- Start Project Rules -->
+
+		<!-- End Project Rules -->
     </module>
 </module>

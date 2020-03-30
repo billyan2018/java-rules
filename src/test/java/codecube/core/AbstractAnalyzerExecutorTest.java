@@ -1,8 +1,9 @@
 package codecube.core;
 
 import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.Path
+        ;
+import java.util.HashSet;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -47,13 +48,13 @@ public abstract class AbstractAnalyzerExecutorTest {
   @Test
   @Ignore
   public void should_report_issues() {
-	HashSet<String> texts = new HashSet<>() {
-		{
-			add("a");
-			add("b");
-			add("c");
-		}
-	};
+    HashSet<String> texts = new HashSet<String>() {
+        {
+            add("a");
+            add("b");
+            add("c");
+        }
+    };
 
     AnalyzerResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();

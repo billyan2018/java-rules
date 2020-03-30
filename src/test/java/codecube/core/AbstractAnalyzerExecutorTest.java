@@ -46,7 +46,6 @@ public abstract class AbstractAnalyzerExecutorTest {
   abstract int symbolRefCount();
 
   @Test
-  @Ignore
   public void should_report_issues() {
     HashSet<String> texts = new HashSet<String>() {
         {
@@ -64,7 +63,6 @@ public abstract class AbstractAnalyzerExecutorTest {
   }
 
   @Test
-  @Ignore
   public void should_report_highlightings() {
     AnalyzerResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();
@@ -73,7 +71,6 @@ public abstract class AbstractAnalyzerExecutorTest {
   }
 
   @Test
-  @Ignore
   public void should_report_symbol_refs() {
     AnalyzerResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();
@@ -82,7 +79,6 @@ public abstract class AbstractAnalyzerExecutorTest {
   }
 
   @Test
-  @Ignore
   public void should_report_analysis_failed() {
     AnalyzerResult result = execute(invalidExampleCode() + validExampleCode());
     assertThat(result.success()).isFalse();

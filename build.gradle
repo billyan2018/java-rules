@@ -59,6 +59,10 @@ jar {
     }
 }
 
+jacocoTestReport {
+    dependsOn test
+}
+
 /*jacocoTestReport {
     //cleaning up the JiBx classes to jacoco will not cause problems for CareDiscovery
     doFirst {

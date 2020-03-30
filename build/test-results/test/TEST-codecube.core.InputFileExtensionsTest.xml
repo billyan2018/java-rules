@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="codecube.core.InputFileExtensionsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-03-30T00:53:19" hostname="L50517" time="0.001">
+  <properties/>
+  <testcase name="should_return_self_for_nonexistent" classname="codecube.core.InputFileExtensionsTest" time="0.001"/>
+  <testcase name="should_return_js_for_javascript" classname="codecube.core.InputFileExtensionsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

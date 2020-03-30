@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af80877b-226d-45c3-82ff-0149b80cfa9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/codecube/core/AbstractAnalyzerExecutorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/codecube/core/AbstractAnalyzerExecutorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RunManager">
@@ -98,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585529351201</updated>
-      <workItem from="1585529353962" duration="229000" />
+      <workItem from="1585529353962" duration="897000" />
     </task>
     <servers />
   </component>
@@ -122,9 +122,9 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state width="1431" height="353" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1585529404855" />
-    <state x="308" y="75" key="SettingsEditor" timestamp="1585529493005">
+    <state x="308" y="75" key="SettingsEditor" timestamp="1585530207245">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="308" y="75" key="SettingsEditor/62.0.1474.864@62.0.1474.864" timestamp="1585529493005" />
+    <state x="308" y="75" key="SettingsEditor/62.0.1474.864@62.0.1474.864" timestamp="1585530207245" />
   </component>
 </project>

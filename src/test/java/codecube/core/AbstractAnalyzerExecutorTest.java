@@ -48,13 +48,13 @@ public abstract class AbstractAnalyzerExecutorTest {
   @Test
   @Ignore
   public void should_report_issues() {
-	HashSet<String> texts = new HashSet<String>() {
-		{
-			add("a");
-			add("b");
-			add("c");
-		}
-	};
+    HashSet<String> texts = new HashSet<String>() {
+        {
+            add("a");
+            add("b");
+            add("c");
+        }
+    };
 
     AnalyzerResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();

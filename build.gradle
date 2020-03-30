@@ -70,5 +70,5 @@ jar {
 
 codacy {
 
-    projectToken = '2d2c3bf4d3b64f76acda22aa905159d1'
+    projectToken = '6dde32b5d7af48cf983e5ec83b613bb5'
 }

@@ -23,8 +23,6 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: get gradle
-      run: gradlew wrapper --gradle-version 6.2 --distribution-type all
     - name: Build and upload coverage to Cadacy
       run: ./gradlew jacocoTestReportCodacyUpload
       

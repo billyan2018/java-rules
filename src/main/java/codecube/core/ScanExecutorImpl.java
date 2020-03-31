@@ -13,6 +13,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.extern.slf4j.Slf4j;
 import org.sonar.api.batch.fs.TextRange;
 import org.sonar.api.batch.sensor.error.AnalysisError;
 import org.sonar.api.batch.sensor.highlighting.TypeOfText;
@@ -30,6 +32,7 @@ import org.sonarsource.sonarlint.core.client.api.standalone.StandaloneAnalysisCo
 import org.sonarsource.sonarlint.core.client.api.standalone.StandaloneGlobalConfiguration;
 import org.sonarsource.sonarlint.core.client.api.standalone.StandaloneSonarLintEngine;
 
+@Slf4j
 public class ScanExecutorImpl implements ScanExecutor {
 
   private static Path newDir(Path path) throws IOException {
@@ -53,6 +56,7 @@ public class ScanExecutorImpl implements ScanExecutor {
       tmp = newTempDir();
       workDir = newDir(tmp.resolve("work"));
     } catch (IOException e) {
+      log.error("Cannot create folders", e);
       throw new IllegalStateException("Could not create temp dir");
     }
 

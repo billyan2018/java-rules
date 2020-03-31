@@ -1,7 +1,7 @@
 package codecube;
 
-import codecube.core.Analyzer;
-import codecube.core.AnalyzerResult;
+import codecube.core.Scanner;
+import codecube.core.ScanResult;
 import codecube.core.InputFileExtensions;
 import codecube.core.LanguagePlugin;
 import lombok.extern.slf4j.Slf4j;
@@ -16,10 +16,10 @@ import java.nio.file.Path;
 abstract class BaseAnalyzer {
 
     private final LanguagePlugin languagePlugin = newLanguagePlugin();
-    private final Analyzer analyzer = new Analyzer(languagePlugin);
+    private final Scanner scanner = new Scanner(languagePlugin);
 
-    public AnalyzerResult analyze(String source) {
-        return analyzer.apply(source);
+    public ScanResult analyze(String source) {
+        return scanner.apply(source);
     }
 
     private LanguagePlugin newLanguagePlugin() {

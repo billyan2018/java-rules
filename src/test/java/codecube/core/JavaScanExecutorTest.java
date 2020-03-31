@@ -3,7 +3,7 @@ package codecube.core;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class JavaAnalyzerExecutorTest extends AbstractAnalyzerExecutorTest {
+public class JavaScanExecutorTest extends AbstractScanExecutorTest {
 
   @Override
   String languageCode() {

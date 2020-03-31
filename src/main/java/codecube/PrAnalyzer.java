@@ -2,7 +2,7 @@ package codecube;
 
 import codecube.utils.GitHubRetriever;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import codecube.core.AnalyzerResult;
+import codecube.core.ScanResult;
 import codecube.domain.PullFile;
 import java.io.IOException;
 import java.util.*;
@@ -59,7 +59,7 @@ public class PrAnalyzer {
             }
 
             String source = preparePullRequestFile(file);
-            AnalyzerResult result = analyzer.analyze(source);
+            ScanResult result = analyzer.analyze(source);
             Set<Integer> changedLines = file.changedLines();
             System.out.println("======" + file.getFilename() + ":" + result.issues().size());
             result.issues().forEach(

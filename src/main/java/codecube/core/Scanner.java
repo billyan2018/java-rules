@@ -19,16 +19,16 @@
  */
 package codecube.core;
 
-public class Analyzer {
+public class Scanner {
 
   private final LanguagePlugin languagePlugin;
-  private final AnalyzerExecutor executor = new AnalyzerExecutorImpl();
+  private final ScanExecutor executor = new ScanExecutorImpl();
 
-  public Analyzer(LanguagePlugin languagePlugin) {
+  public Scanner(LanguagePlugin languagePlugin) {
     this.languagePlugin = languagePlugin;
   }
 
-  public AnalyzerResult apply(String code) {
+  public ScanResult apply(String code) {
     return executor.execute(languagePlugin, code);
   }
 

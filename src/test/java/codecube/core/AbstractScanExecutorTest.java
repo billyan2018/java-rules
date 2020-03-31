@@ -5,16 +5,15 @@ import java.nio.file.Path
         ;
 import java.util.HashSet;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.fail;
 
-public abstract class AbstractAnalyzerExecutorTest {
+public abstract class AbstractScanExecutorTest {
   
 
-  private  AnalyzerExecutor executor = new AnalyzerExecutorImpl();
+  private ScanExecutor executor = new ScanExecutorImpl();
 
    final LanguagePlugin languagePlugin = newLanguagePlugin();
 
@@ -55,7 +54,7 @@ public abstract class AbstractAnalyzerExecutorTest {
         }
     };
 
-    AnalyzerResult result = execute(validExampleCode());
+    ScanResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();
     assertThat(result.errors()).isEmpty();
     assertThat(result.issues()).hasSize(issueCount());
@@ -64,7 +63,7 @@ public abstract class AbstractAnalyzerExecutorTest {
 
   @Test
   public void should_report_highlightings() {
-    AnalyzerResult result = execute(validExampleCode());
+    ScanResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();
     assertThat(result.errors()).isEmpty();
     assertThat(result.highlightings()).hasSize(highlightingCount());
@@ -72,7 +71,7 @@ public abstract class AbstractAnalyzerExecutorTest {
 
   @Test
   public void should_report_symbol_refs() {
-    AnalyzerResult result = execute(validExampleCode());
+    ScanResult result = execute(validExampleCode());
     assertThat(result.success()).isTrue();
     assertThat(result.errors()).isEmpty();
     assertThat(result.symbolRefs()).hasSize(symbolRefCount());
@@ -80,7 +79,7 @@ public abstract class AbstractAnalyzerExecutorTest {
 
   @Test
   public void should_report_analysis_failed() {
-    AnalyzerResult result = execute(invalidExampleCode() + validExampleCode());
+    ScanResult result = execute(invalidExampleCode() + validExampleCode());
     assertThat(result.success()).isFalse();
     assertThat(result.errors()).isNotEmpty();
     assertThat(result.errors().get(0).message()).isNotNull();
@@ -94,7 +93,7 @@ public abstract class AbstractAnalyzerExecutorTest {
     assertThat(result.symbolRefs()).isEmpty();
   }
 
-  private AnalyzerResult execute(String code) {
+  private ScanResult execute(String code) {
     return executor.execute(languagePlugin, code);
   }
   

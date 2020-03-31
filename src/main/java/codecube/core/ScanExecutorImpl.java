@@ -13,6 +13,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.extern.slf4j.Slf4j;
 import org.sonar.api.batch.fs.TextRange;
 import org.sonar.api.batch.sensor.error.AnalysisError;
 import org.sonar.api.batch.sensor.highlighting.TypeOfText;
@@ -30,7 +32,8 @@ import org.sonarsource.sonarlint.core.client.api.standalone.StandaloneAnalysisCo
 import org.sonarsource.sonarlint.core.client.api.standalone.StandaloneGlobalConfiguration;
 import org.sonarsource.sonarlint.core.client.api.standalone.StandaloneSonarLintEngine;
 
-public class AnalyzerExecutorImpl implements AnalyzerExecutor {
+@Slf4j
+public class ScanExecutorImpl implements ScanExecutor {
 
   private static Path newDir(Path path) throws IOException {
     return Files.createDirectories(path);
@@ -41,24 +44,20 @@ public class AnalyzerExecutorImpl implements AnalyzerExecutor {
   }
 
   @Override
-  public AnalyzerResult execute(LanguagePlugin languagePlugin, String code) {
+  public ScanResult execute(LanguagePlugin languagePlugin, String code) {
     StandaloneGlobalConfiguration globalConfig = StandaloneGlobalConfiguration.builder()
             .addPlugin(languagePlugin.getUrl())
             .build();
     StandaloneSonarLintEngine engine = new StandaloneSonarLintEngineImpl(globalConfig);
 
     Path tmp;
-    try {
-      tmp = newTempDir();
-    } catch (IOException e) {
-      throw new IllegalStateException("Could not create temp dir");
-    }
-
     Path workDir;
     try {
+      tmp = newTempDir();
       workDir = newDir(tmp.resolve("work"));
     } catch (IOException e) {
-      throw new IllegalStateException("Could not create workdir");
+      log.error("Cannot create folders", e);
+      throw new IllegalStateException("Could not create temp dir");
     }
 
     Path path = tmp.resolve("code." + languagePlugin.getInputFileExtension());
@@ -128,7 +127,7 @@ public class AnalyzerExecutorImpl implements AnalyzerExecutor {
       analysisErrorsListener,
       logOutput);
 
-    return new AnalyzerResult() {
+    return new ScanResult() {
       @Override
       public List<Issue> issues() {
         return issues;

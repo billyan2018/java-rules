@@ -27,7 +27,7 @@ abstract class BaseAnalyzer {
             String inputFileExtension = InputFileExtensions.fromLanguageCode(language());
             return new LanguagePlugin(findPluginFile().toUri().toURL(), inputFileExtension);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.warn("newLanguagePlugin failed:", e);
         }
         // unreachable
         return null;

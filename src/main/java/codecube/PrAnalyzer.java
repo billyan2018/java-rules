@@ -51,7 +51,7 @@ public class PrAnalyzer {
     private void proceed() throws IOException {
         List<PullFile> files = retrieveFiles();
         for (PullFile file : files) {
-            System.out.println("======" + file.getFilename());
+            log.info("======" + file.getFilename());
             String fileExtension = FilenameUtils.getExtension(file.getFilename());
             BaseAnalyzer analyzer = ANALYZERS.get(fileExtension);
             if (null == analyzer) {
@@ -61,7 +61,7 @@ public class PrAnalyzer {
             String source = preparePullRequestFile(file);
             ScanResult result = analyzer.analyze(source);
             Set<Integer> changedLines = file.changedLines();
-            System.out.println("======" + file.getFilename() + ":" + result.issues().size());
+            log.info("======" + file.getFilename() + ":" + result.issues().size());
             result.issues().forEach(
                    issue -> {
                        boolean inScope = isInChange(changedLines, issue.getStartLine(), issue.getEndLine());

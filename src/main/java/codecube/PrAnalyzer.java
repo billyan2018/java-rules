@@ -51,7 +51,7 @@ public class PrAnalyzer {
     private void proceed() throws IOException {
         List<PullFile> files = retrieveFiles();
         for (PullFile file : files) {
-            log.info("======" + file.getFilename());
+            System.out.println("======" + file.getFilename());
             String fileExtension = FilenameUtils.getExtension(file.getFilename());
             BaseAnalyzer analyzer = ANALYZERS.get(fileExtension);
             if (null == analyzer) {

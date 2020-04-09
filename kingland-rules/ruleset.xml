@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         name="EDM PMD Best Practices Ruleset"
+<ruleset name="Kingland java Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
     <!-- Start Company Rules -->
     <description>
+        Kingland java Rules
     </description>
     <include-pattern>.*.java</include-pattern>
     <!-- High Priority  -->

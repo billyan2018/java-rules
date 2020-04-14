@@ -8,9 +8,8 @@
     <property name="severity" value="warning"/>
     <property name="fileExtensions" value="java"/>
     <module name="SuppressionFilter">
-        <property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
-                  default="checkstyle-suppressions.xml" />
-        <property name="optional" value="true"/>
+        <property name="file" value="kingland-rules/checkstyle-suppressions.xml"/>
+        <property name="optional" value="false"/>
     </module>
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>

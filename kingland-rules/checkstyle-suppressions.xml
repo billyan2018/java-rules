@@ -7,4 +7,3 @@
 <suppressions>
   <suppress checks="MagicNumber" files=".*[\\/]src[\\/](test|it)[\\/]"/> 
 </suppressions>
-          

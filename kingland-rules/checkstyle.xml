@@ -8,9 +8,8 @@
     <property name="severity" value="warning"/>
     <property name="fileExtensions" value="java"/>
     <module name="SuppressionFilter">
-        <property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
-                  default="checkstyle-suppressions.xml" />
-        <property name="optional" value="true"/>
+        <property name="file" value="kingland-rules/checkstyle-suppressions.xml"/>
+        <property name="optional" value="false"/>
     </module>
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
@@ -23,10 +22,6 @@
 
     <module name="TreeWalker">
         <property name="fileExtensions" value="java"/>
-
-
-
-  
         <module name="EmptyBlock">
             <property name="option" value="TEXT"/>
             <property name="tokens"
@@ -46,7 +41,6 @@
         </module>
       
         <module name="ModifierOrder"/>
-
         <module name="LocalVariableName">
             <property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
             <message key="name.invalidPattern"
@@ -70,10 +64,8 @@
         <module name="VisibilityModifier"/>
         <module name="HideUtilityClassConstructor"/>
         <module name="AvoidNestedBlocks"/>
-        <!-- End Company Rules -->
-
-        <!-- Start Project Rules -->
-
-        <!-- End Project Rules -->
     </module>
+	<!-- End Company Rules -->
+	<!-- Start Project Rules -->
+    <!-- End Project Rules -->
 </module>

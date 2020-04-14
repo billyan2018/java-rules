@@ -23,10 +23,6 @@
 
     <module name="TreeWalker">
         <property name="fileExtensions" value="java"/>
-
-
-
-  
         <module name="EmptyBlock">
             <property name="option" value="TEXT"/>
             <property name="tokens"
@@ -46,7 +42,6 @@
         </module>
       
         <module name="ModifierOrder"/>
-
         <module name="LocalVariableName">
             <property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
             <message key="name.invalidPattern"
@@ -70,10 +65,8 @@
         <module name="VisibilityModifier"/>
         <module name="HideUtilityClassConstructor"/>
         <module name="AvoidNestedBlocks"/>
-        <!-- End Company Rules -->
-
-        <!-- Start Project Rules -->
-
-        <!-- End Project Rules -->
     </module>
+	<!-- End Company Rules -->
+	<!-- Start Project Rules -->
+    <!-- End Project Rules -->
 </module>

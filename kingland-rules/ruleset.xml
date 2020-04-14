@@ -33,7 +33,11 @@
     <rule ref="category/java/bestpractices.xml/PositionLiteralsFirstInCaseInsensitiveComparisons" />
     <rule ref="category/java/bestpractices.xml/PositionLiteralsFirstInComparisons" />
     <!-- Code style -->
-    <rule ref="category/java/codestyle.xml/ShortVariable" />
+    <rule ref="category/java/codestyle.xml/ShortVariable">
+        <properties>
+            <property name="minimum" value="2" />
+        </properties>
+    </rule>
     <rule ref="category/java/codestyle.xml/ShortMethodName" />
     <rule ref="category/java/bestpractices.xml/DefaultLabelNotLastInSwitchStmt" />
     <rule ref="category/java/bestpractices.xml/SwitchStmtsShouldHaveDefault" />

@@ -11,6 +11,7 @@ public class JavaScanExecutorTest extends AbstractScanExecutorTest {
 	try {
 		// nothing
 	} catch(Throwable th) {
+	}
 		
     return "java";
   }

@@ -31,6 +31,7 @@ public class AnalysisErrorTranslatorTest {
   public void should_translate_parse_errors() {
     int line = 2;
     int column = 14;
+    {
     String originalMessage = String.format("Parse error at line %d column %d:whatever", line, column);
     String expectedMessage = String.format("Parse error at line %d column %d", line, column);
 
@@ -42,6 +43,7 @@ public class AnalysisErrorTranslatorTest {
     TextPointer location = translated.location();
     assertThat(location.line()).isEqualTo(expected.location().line());
     assertThat(location.lineOffset()).isEqualTo(expected.location().lineOffset());
+    }
   }
 
   private AnalysisError newAnalysisError(@Nullable String message, TextPointer location) {

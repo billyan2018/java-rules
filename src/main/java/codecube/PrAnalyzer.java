@@ -49,6 +49,7 @@ public class PrAnalyzer {
     }
 
     private void proceed() throws IOException {
+
         List<PullFile> files = retrieveFiles();
         for (PullFile file : files) {
             System.out.println("======" + file.getFilename());

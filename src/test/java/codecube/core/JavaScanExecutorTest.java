@@ -7,12 +7,6 @@ public class JavaScanExecutorTest extends AbstractScanExecutorTest {
 
   @Override
   String languageCode() {
-	System.out.println("make an issue");
-	try {
-		// nothing
-	} catch(Throwable th) {
-	}
-		
     return "java";
   }
 

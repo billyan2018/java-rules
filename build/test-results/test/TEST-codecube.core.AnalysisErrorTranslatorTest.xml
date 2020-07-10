@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="codecube.core.AnalysisErrorTranslatorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-03-30T00:53:18" hostname="L50517" time="1.053">
-  <properties/>
-  <testcase name="should_do_nothing_if_message_is_null" classname="codecube.core.AnalysisErrorTranslatorTest" time="1.042"/>
-  <testcase name="should_do_nothing_if_not_parse_error" classname="codecube.core.AnalysisErrorTranslatorTest" time="0.0"/>
-  <testcase name="should_translate_parse_errors" classname="codecube.core.AnalysisErrorTranslatorTest" time="0.011"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -67,6 +67,37 @@
     <rule ref="category/java/errorprone.xml/EmptyFinallyBlock" />
     <rule ref="category/java/errorprone.xml/ReturnFromFinallyBlock" />
     <rule ref="category/java/errorprone.xml/DoNotThrowExceptionInFinally" />
+    <!-- r1.2 begin-->
+   <rule ref="category/java/documentation.xml/CommentRequired">
+        <properties>
+            <property name="methodWithOverrideCommentRequirement" value="Ignored" />
+            <property name="accessorCommentRequirement" value="Ignored" />
+            <property name="classCommentRequirement" value="Required" />
+            <property name="fieldCommentRequirement" value="Ignored" />
+            <property name="publicMethodCommentRequirement" value="Required" />
+            <property name="protectedMethodCommentRequirement" value="Required" />
+            <property name="enumCommentRequirement" value="Required" />
+            <property name="serialVersionUIDCommentRequired" value="Ignored" />
+            <property name="serialPersistentFieldsCommentRequired" value="Ignored" />
+        </properties>
+    </rule>
+    <rule ref="category/java/documentation.xml/UncommentedEmptyConstructor" />
+    <rule ref="category/java/documentation.xml/UncommentedEmptyMethodBody" />
+    <rule ref="category/java/bestpractices.xml/JUnitUseExpected" />
+    <rule ref="category/java/errorprone.xml/DetachedTestCase" />
+    <rule ref="category/java/performance.xml/StringToString" />
+    <rule ref="category/java/errorprone.xml/UseEqualsToCompareStrings" />
+    <rule ref="category/java/design.xml/AvoidThrowingNewInstanceOfSameException" />
+    <rule ref="category/java/design.xml/ImmutableField" />
+    <rule ref="category/java/bestpractices.xml/MissingOverride" />
+    <rule ref="category/java/errorprone.xml/AvoidFieldNameMatchingTypeName" />
+    <rule ref="category/java/errorprone.xml/AvoidMultipleUnaryOperators" />
+    <rule ref="category/java/errorprone.xml/EmptyIfStmt" />
+    <rule ref="category/java/errorprone.xml/UnnecessaryCaseChange" />
+    <rule ref="category/java/performance.xml/ConsecutiveAppendsShouldReuse" />
+    <rule ref="category/java/design.xml/ExcessiveClassLength" />
+    <rule ref="category/java/errorprone.xml/DoNotCallSystemExit" />
+    <!-- r1.2 end -->
     <!-- End Company Rules -->
 
     <!-- Start Project Rules -->

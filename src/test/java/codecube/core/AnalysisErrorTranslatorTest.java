@@ -31,17 +31,20 @@ public class AnalysisErrorTranslatorTest {
   public void should_translate_parse_errors() {
     int line = 2;
     int column = 14;
-    String originalMessage = String.format("Parse error at line %d column %d:whatever", line, column);
-    String expectedMessage = String.format("Parse error at line %d column %d", line, column);
+    {
+      String originalMessage = String.format("Parse error at line %d column %d:whatever", line, column);
+      String expectedMessage = String.format("Parse error at line %d column %d", line, column);
 
-    AnalysisError parseError = newAnalysisError(originalMessage, mock(TextPointer.class));
-    AnalysisError expected = newAnalysisError(expectedMessage, new DefaultTextPointer(line, column - 1));
 
-    AnalysisError translated = translator.translate(parseError);
-    assertThat(translated.message()).isEqualTo(expected.message());
-    TextPointer location = translated.location();
-    assertThat(location.line()).isEqualTo(expected.location().line());
-    assertThat(location.lineOffset()).isEqualTo(expected.location().lineOffset());
+      AnalysisError parseError = newAnalysisError(originalMessage, mock(TextPointer.class));
+      AnalysisError expected = newAnalysisError(expectedMessage, new DefaultTextPointer(line, column - 1));
+
+      AnalysisError translated = translator.translate(parseError);
+      assertThat(translated.message()).isEqualTo(expected.message());
+      TextPointer location = translated.location();
+      assertThat(location.line()).isEqualTo(expected.location().line());
+      assertThat(location.lineOffset()).isEqualTo(expected.location().lineOffset());
+    }
   }
 
   private AnalysisError newAnalysisError(@Nullable String message, TextPointer location) {

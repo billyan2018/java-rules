@@ -3,6 +3,8 @@ package codecube.core;
 import javax.annotation.CheckForNull;
 import javax.annotation.Nullable;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.fs.TextPointer;
 import org.sonar.api.batch.fs.internal.DefaultTextPointer;
@@ -13,6 +15,7 @@ import static org.mockito.Mockito.mock;
 
 public class AnalysisErrorTranslatorTest {
 
+  private final Logger log = LoggerFactory.getLogger(AnalysisErrorTranslatorTest.class);
   private final AnalysisErrorTranslator translator = new AnalysisErrorTranslator();
 
   @Test

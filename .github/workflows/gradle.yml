@@ -23,7 +23,7 @@ jobs:
 
     - uses: sfdx-actions/setup-pmd@v1       
     - name: run-pmd 
-      run: pmd -d ./force-app/main/default/classes -R ./kingland-rules/ruleset.xml -f text
+      run: pmd -d ./src -R ./kingland-rules/ruleset.xml -f text
       
       
       

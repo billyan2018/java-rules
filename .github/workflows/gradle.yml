@@ -25,7 +25,7 @@ jobs:
     - name: PMD Code Analyzer Action
       run: pmd -d ./src -R ./kingland-rules/ruleset.xml -f text -failOnViolation false -r pmd-report.txt
     
-    - name: Archive code coverage results
+    - name: Archive PMD report
       uses: actions/upload-artifact@v2
       with:
         name: pmd-report

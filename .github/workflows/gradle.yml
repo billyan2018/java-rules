@@ -25,6 +25,11 @@ jobs:
       run: chmod +x gradlew
     - name: Build and upload coverage to Cadacy
       run: ./gradlew jacocoTestReportCodacyUpload
+
+    - uses: sfdx-actions/setup-pmd@v1       
+    - name: run-pmd 
+      run: pmd -d ./force-app/main/default/classes -R ./kingland-rules/ruleset.xml -f text
+      
       
       
       

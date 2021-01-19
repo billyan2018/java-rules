@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: 1.8
 
-    - uses: billyan2018/setup-pmd@PMDAnalyzer1.0      
+    - uses: billyan2018/setup-pmd@1.1      
     - name: PMD Code Analyzer Action
       run: pmd -d ./src -R ./kingland-rules/ruleset.xml -f text
       

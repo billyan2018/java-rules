@@ -21,9 +21,15 @@ jobs:
       with:
         java-version: 1.8
 
-    - uses: billyan2018/setup-pmd@1.1      
+    - uses: billyan2018/setup-pmd@1.2   
     - name: PMD Code Analyzer Action
-      run: pmd -d ./src -R ./kingland-rules/ruleset.xml -f text
+      run: pmd -d ./src -R ./kingland-rules/ruleset.xml -f text -failOnViolation false -r pmd-report.txt
+    
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v2
+      with:
+        name: pmd-report
+        path: report/pmd-report.txt
       
       
       

@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: 1.8
 
-    - uses: sfdx-actions/setup-pmd@v1       
+    - uses: billyan2018/setup-pmd@v1       
     - name: run-pmd 
       run: pmd -d ./src -R ./kingland-rules/ruleset.xml -f text
       

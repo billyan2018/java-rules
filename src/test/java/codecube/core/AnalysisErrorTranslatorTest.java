@@ -3,6 +3,8 @@ package codecube.core;
 import javax.annotation.CheckForNull;
 import javax.annotation.Nullable;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.fs.TextPointer;
 import org.sonar.api.batch.fs.internal.DefaultTextPointer;
@@ -13,6 +15,7 @@ import static org.mockito.Mockito.mock;
 
 public class AnalysisErrorTranslatorTest {
 
+  private final Logger log = LoggerFactory.getLogger(AnalysisErrorTranslatorTest.class);
   private final AnalysisErrorTranslator translator = new AnalysisErrorTranslator();
 
   @Test
@@ -31,17 +34,20 @@ public class AnalysisErrorTranslatorTest {
   public void should_translate_parse_errors() {
     int line = 2;
     int column = 14;
-    String originalMessage = String.format("Parse error at line %d column %d:whatever", line, column);
-    String expectedMessage = String.format("Parse error at line %d column %d", line, column);
+    {
+      String originalMessage = String.format("Parse error at line %d column %d:whatever", line, column);
+      String expectedMessage = String.format("Parse error at line %d column %d", line, column);
 
-    AnalysisError parseError = newAnalysisError(originalMessage, mock(TextPointer.class));
-    AnalysisError expected = newAnalysisError(expectedMessage, new DefaultTextPointer(line, column - 1));
 
-    AnalysisError translated = translator.translate(parseError);
-    assertThat(translated.message()).isEqualTo(expected.message());
-    TextPointer location = translated.location();
-    assertThat(location.line()).isEqualTo(expected.location().line());
-    assertThat(location.lineOffset()).isEqualTo(expected.location().lineOffset());
+      AnalysisError parseError = newAnalysisError(originalMessage, mock(TextPointer.class));
+      AnalysisError expected = newAnalysisError(expectedMessage, new DefaultTextPointer(line, column - 1));
+
+      AnalysisError translated = translator.translate(parseError);
+      assertThat(translated.message()).isEqualTo(expected.message());
+      TextPointer location = translated.location();
+      assertThat(location.line()).isEqualTo(expected.location().line());
+      assertThat(location.lineOffset()).isEqualTo(expected.location().lineOffset());
+    }
   }
 
   private AnalysisError newAnalysisError(@Nullable String message, TextPointer location) {
